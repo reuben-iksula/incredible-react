@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --nav-width: 20.5rem;
+  --section-max-width: 58.75rem;
+  --font-oswald: "Oswald", sans-serif;
+}
+
+/* *,
+*::after,
+*::before {
+  outline: 1px solid red;
+} */
+
+@layer components {
+  .btn {
+    @apply px-[1.25rem] py-[0.6875rem] rounded-[0.25rem];
+  }
+
+  .error-text {
+    @apply text-red-400 text-center mt-2;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    /* x 40px y 63px */
+    @apply px-[2.5rem] py-[3.9375rem];
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .subtitle {
+    @apply text-center font-sans leading-[1.875rem] text-[1.1875rem] text-primaryGray;
+  }
+
+  .button-transition-config {
+    @apply transition-[background-color,_border,_color] ease-[ease] duration-300;
+  }
+
+  .input-styles {
+    @apply block w-full px-3 py-3 text-sm leading-[1.42857143] rounded-[3px] shadow-[0_0_0_1px_rgba(64,_64,_71,_0.3)] outline-0 focus:shadow-[#2e80b6] active:shadow-[#2e80b6] placeholder:text-primaryGray;
+  }
+
+  .form-control {
+    @apply mx-2.5 mb-[1.06rem];
+  }
+}
